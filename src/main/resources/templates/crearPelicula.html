@@ -16,7 +16,7 @@
                     <h1 class="text-center">Registro de estudiantes</h1>
                     <div class="card-body">
                         <form th:action="@{/savePelicula}" th:object="${pelicula}" method='POST'>
-                             <input type="hidden" th:field="*{id}">
+                             <input type="hidden" th:field="*{idPelicula}">
                             <div class="mb-3">
                                 <label class="form-label">Nombre</label>
                                 <input type="text" class="form-control" name='nombrePelicula'  th:field='*{nombre}' placeholder="Nombre de la pelicula" required>
