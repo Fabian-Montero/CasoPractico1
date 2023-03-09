@@ -46,6 +46,13 @@ public class PeliculaController {
         return "redirect:/pelicula";
     }
     
+    @GetMapping("/editPelicula/{id}")
+    public String editarPelicula (@PathVariable("id") int idPelicula, Model model){
+        Pelicula pelicula = peliculaService.getPeliculaById(idPelicula);
+        model.addAttribute("pelicula", pelicula);
+        return "crearPelicula";
+    }
+    
     
     
     
